@@ -8,6 +8,23 @@
 	<link href="steelcup.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+	 <script>
+      function smoothScroll(target) {
+        const element = document.querySelector(target);
+
+        window.scrollTo({
+          behavior: 'smooth',
+          top: element.offsetTop
+        });
+      }
+
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          smoothScroll(this.getAttribute('href'));
+        });
+      });
+    </script>
 	<header>
 	<nav>
 		<ul>

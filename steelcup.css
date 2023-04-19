@@ -2,6 +2,9 @@
 /* CSS Document */
 /* Global styles */
 /* Global Styles */
+html {
+      scroll-behavior: smooth;
+    }
 body {
   margin: 0;
   padding: 0;
@@ -252,5 +255,14 @@ label {
     width: auto;
   }
 }
-
+footer {
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: center;
+    align-items: center;
+  padding: 10px 30px;
+  width: 100%;
+  z-index: 1;
+}
 
