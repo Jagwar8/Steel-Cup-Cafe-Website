@@ -7,7 +7,6 @@
 	<link rel="stylesheet" href="style.css">
 	<link href="steelcup.css" rel="stylesheet" type="text/css">
 </head>
-<body>
 	 <script>
   function smoothScroll(target) {
     const element = document.querySelector(target);
@@ -27,14 +26,6 @@
   });
 </script>
 
-
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          smoothScroll(this.getAttribute('href'));
-        });
-      });
-    </script>
 	<header>
 	<nav>
 		<ul>
@@ -120,10 +111,9 @@
 			<input type="submit" value="Send">
 		</form>
 	</section>
-
 </main>
 
 <footer>
 	<p>This is an unofficial webpage for Steel Cup Cafe. </p>
-	</footer>
- 
+</footer>
+	</html>
