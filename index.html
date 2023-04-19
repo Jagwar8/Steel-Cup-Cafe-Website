@@ -9,14 +9,24 @@
 </head>
 <body>
 	 <script>
-      function smoothScroll(target) {
-        const element = document.querySelector(target);
+  function smoothScroll(target) {
+    const element = document.querySelector(target);
 
-        window.scrollTo({
-          behavior: 'smooth',
-          top: element.offsetTop
-        });
-      }
+    window.scrollTo({
+      behavior: 'smooth',
+      top: element.offsetTop,
+      duration: 1000
+    });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      smoothScroll(this.getAttribute('href'));
+    });
+  });
+</script>
+
 
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
