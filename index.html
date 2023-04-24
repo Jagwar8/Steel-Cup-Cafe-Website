@@ -4,32 +4,26 @@
 	<title>Steel Cup Cafe | Long Beach, CA</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style.css">
 	<link href="steelcup.css" rel="stylesheet" type="text/css">
 </head>
-	 <script>
-function smoothScroll(target) {
-  const element = document.querySelector(target);
-  element.scrollIntoView({ behavior: 'smooth', block: 'start', duration: 1000 });
-}
+	 	<script>
+		function smoothScroll(target) {
+			const element = document.getElementById(target);
+			setTimeout(() => {
+				element.scrollIntoView({
+					behavior: "smooth"
+				});
+			}, 1500);
+		}
+	</script>
 
-  }
-
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      smoothScroll(this.getAttribute('href'));
-    });
-  });
-</script>
-
-	<header>
+<header>
 	<nav id="navbar">
 		<ul>
-			<li><a href="#about">About</a></li>
-			<li><a href="#menu">Menu</a></li>
-			<li><a href="#gallery">Gallery</a></li>
-			<li><a href="#contact">Contact Us</a></li>
+			<li><a href="#about" onclick="smoothScroll('about')">About</a></li>
+			<li><a href="#menu" onclick="smoothScroll('menu')">Menu</a></li>
+			<li><a href="#gallery" onclick="smoothScroll('gallery')">Gallery</a></li>
+			<li><a href="#contact" onclick="smoothScroll('contact')">Contact Us</a></li>
 		</ul>
 	</nav>
 </header>
@@ -56,49 +50,63 @@ function smoothScroll(target) {
     statusSection.classList.add("show");
   }, 1000);
 </script>
+		<div>
+    <img src="Assets/STEEL-CUP-CAFE.jpg" alt="SCC Logo" width="1170">
+  </div>
+  
+	<section id="hours">
+  <h2>Hours</h2>
+  <p><strong>Daily hours:</strong> 7am-6pm</p>
+  <p><strong>Kitchen hours:</strong> 7am-5pm</p>
+</section>
 	<section id="about">
-	  <h1>About Steel Cup Cafe</h1>
-		<p>Welcome to Steel Cup Cafe, a cozy and welcoming cafe located in the heart of Long Beach. We specialize in serving artisanal coffee, delicious pastries, and homemade breakfast and lunch items. Our friendly staff is dedicated to providing excellent customer service, and we take pride in using only the freshest and highest quality ingredients in all of our dishes.</p>
+	  <h1>About Steel Cup Café</h1>
+		<p>Welcome to Steel Cup Café, a breakfast and lunch spot located in the heart of Artcroft Manor in Long Beach. Ever since opening in 2019, we have served artisan sandwiches, wraps, salads, brunch plates, and fresh-baked pastries to our community. Our executive chef, Marc Chitwood, brings quality and craftsmanship to our interpretations of beloved café favorites, while Nicholas Stok's coffee program offers a selection of specialty drinks and organic roasts that are Fair Trade and Rainforest Alliance certified. The café has an unexpected blend of rustic and raw, organic and industrial atmosphere, making it a perfect locale for work or play. Our approach to creating a modern yet timeless café experience speaks for itself, having earned us a 5-star rating on Yelp. Steel Cup Café is an environmentally sustainable business that partners with local and small-scale farmers, operates energy-efficient technology, and uses 100% biodegradable, plant-based alternatives instead of single-use plastics.</p>
   </section>
 
 	<section id="menu" style="text-align:left;">
 	<h2 style="text-align:left;">Our Menu</h2>
 	<div class="menu-item" style="text-align:left;">
-		<img src="coffee.jpg" alt="Coffee">
-		<h3 style="text-align:left; height: 10vh; width:30vh;">Artisanal Coffee</h3>
-		<p style="text-align:left;">Our coffee is carefully selected and roasted to perfection. Try our signature espresso or latte, or choose from our wide selection of specialty drinks.</p>
+		<h3 style="text-align:left; height: 10vh; width:30vh;">Artisanal Drinks</h3>
+		<p style="text-align:left;">Our Fair-Trade and Rainforest Alliance-certified Organic coffee is carefully selected and roasted to perfection. Try our signature espresso drinks hot or iced, or choose from our wide selection of specialty drinks.</p>
 	</div>
 	<div class="menu-item" style="text-align:left;">		
-		<img src="croissant.jpg" alt="Croissant">
-		<h3 style="text-align:left; height: 10vh; width:30vh;">Pastries</h3>
-		<p style="text-align:left;">Our freshly baked pastries are made from scratch every day. From croissants to muffins to danishes, we have something for everyone.</p>
+		<h3 style="text-align:left; height: 10vh; width:30vh;">Breakfast and Brunch</h3>
+		<p style="text-align:left;">Our breakfast and brunch items are made with only the freshest ingredients, all from scratch, all the time. Try our famous avocado toast or our hearty brunch burrito.</p>
 	</div>
 	<div class="menu-item" style="text-align:left;">		
-		<img src="breakfast.jpg" alt="Breakfast">
-		<h3 style="text-align:left; height: 10vh; width:30vh;">Breakfast and Lunch</h3>
-		<p style="text-align:left;">Our breakfast and lunch items are made with only the freshest ingredients. Try our famous avocado toast or our hearty breakfast burrito.</p>
+	<h3 style="text-align:left; height: 10vh; width:30vh;">Lunch and Burgers</h3>
+	<p style="text-align:left;">Our lunch menu includes a variety of options to suit any appetite, from light salads and soups to fresh wraps, sandwiches and burgers.</p>
 	</div>
 </section>
-
 	<section id="gallery">
 		<h2>Gallery</h2>
-		<div class="gallery-item">
-			<img src="coffee-shop.jpg" alt="Coffee Shop">
-		</div>
-		<div class="gallery-item">
-			<img src="coffee-cup.jpg" alt="Coffee Cup">
-		</div>
-		<div class="gallery-item">
-			<img src="latte-art.jpg" alt="Latte Art">
-		</div>
-		<div class="gallery-item">
-			<img src="pastry.jpg" alt="Pastry">
-		</div>
+			<div class="image-divider divider-1">
+  <div class="image-container">
+    <img src="Assets/maple-latte-for-web-2.png" alt="Latte">
+  </div>
+</div>
+		<div class="image-divider divider-1">
+  <div class="image-container">
+    <img src="Assets/istockphoto-1303481589-612x612.jpg" alt="Burrito">
+  </div>
+</div>
+				<div class="image-divider divider-1">
+  <div class="image-container">
+    <img src="Assets/7421bd708b504151b15e0b0d48ce3269.jpg" alt="Burger">
+  </div>
+</div>
+			<div class="image-divider divider-1">
+  <div class="image-container">
+    <img src="Assets/BLT-Sandwiche.jpg" alt="Sandwich">
+  </div>
+</div>
+		
 	</section>
 
 	<section id="contact">
 	<h2>Contact Us</h2>
-	<p>For general inquiries, please email us at <a href="mailto:info@steelcupcafe.com">info@steelcupcafe.com</a></p>
+	<p>For general inquiries, please email us at <a href="mailto:info@steelcupcafe.com">info@steelcupcafe.com</a> or by phone at <a href="tel:+15623426116">(562) 342-6116</a></p>
 	<p>Follow us on social media for updates and special offers:</p>
 	<ul>
 		<li><a href="https://www.facebook.com/steelcupcafe">Facebook</a></li>
