@@ -6,22 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="steelcup.css" rel="stylesheet" type="text/css">
 </head>
-<script>
-function smoothScroll(target) {
-  const element = document.getElementById(target);
-  const yOffset = -100; // adjust this value to offset the scrolling position
-  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-  window.scrollTo({
-    top: y,
-    behavior: 'smooth'
-  });
-
-  // prevent the default behavior of the anchor tag
-  event.preventDefault();
-}
-
-</script>
 
 
 <header>
@@ -117,6 +102,20 @@ function smoothScroll(target) {
 	<h1>Contact Us</h1>
 	<p>For general inquiries, please email us at <a href="mailto:info@steelcupcafe.com">info@steelcupcafe.com</a> or by phone at <a href="tel:+15623426116">(562) 342-6116</a></p>
 	<p>Follow us on social media for updates and special offers:</p>
+		<script>
+function smoothScroll(target) {
+  const element = document.getElementById(target);
+  const yOffset = -100;
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth'
+  });
+
+  event.preventDefault();
+}
+</script>
 	  <script>
 		  function openMap(){
 			   document.getElementById("mapDiv").style.display = "";

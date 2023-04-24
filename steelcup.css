@@ -38,6 +38,8 @@ header {
 }
 #navbar {
   position: fixed;
+	 justify-content: space-between;
+  align-items: center;
   top: 0;
   left: 0;
   width: 100%;
@@ -68,12 +70,12 @@ nav ul {
   display: flex;
   justify-content: center;
 }
-@media only screen and (max-width: 768px) {
-  #navbar ul {
+@media (max-width: 768px) {
+  .navbar {
     flex-direction: column;
-    font-size: 1.5rem;
+    align-items: flex-start;
+    height: auto;
   }
-}
 nav ul li a {
   color: #fff;
   text-decoration: none;
