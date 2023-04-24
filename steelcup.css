@@ -1,41 +1,10 @@
-* {
-  box-sizing: border-box;
+body {
+	box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-/* Typography */
-body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-}
-
-#navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #252222;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	z-index: 2;
-}
-
-
-#navbar li {
-  margin: 0 10px;
-}
-
-#navbar a {
-  display: block;
-  padding: 10px 20px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-#navbar a:hover {
-  color: #A70A0C;
 }
 
 h1, h2, h3 {
@@ -65,8 +34,34 @@ p {
 /* Header */
 header {
   background-color: #292929;
-  color: #fff;
   padding: 16px;
+}
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #252222;
+	color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 2;
+}
+
+
+#navbar li {
+  margin: 0 10px;
+}
+
+#navbar a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+#navbar a:hover {
+  color: #A70A0C;
 }
 
 nav ul {
@@ -74,19 +69,11 @@ nav ul {
   justify-content: center;
 }
 
-nav ul li {
-  margin: 0 16px;
-}
-
 nav ul li a {
   color: #fff;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #f2d75f;
 }
 
 /* Main */
@@ -135,57 +122,6 @@ main {
 	max-width: 150px;
   font-size: 24px;
 }
-
-
-/* Contact section */
-#contact {
-  background-color: #F7F7F7;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-#contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-}
-
-#contact p {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-#contact ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-}
-
-#contact li {
-  margin: 0 10px;
-}
-
-#contact a {
-  color: #A70A0C;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-#contact a:hover {
-  color: #333;
-}
-
-/* Footer */
-#footer {
-	justify-content: center;
-  background-color: #292929;
-  color: #fff;
-  padding: 16px
-}
 /* Gallery Items */
 .image-divider {
 	z-index: 1;
@@ -220,6 +156,73 @@ main {
 .image-divider:hover .image-container img {
   transform: translate3d(0, -5%, 0);;
 }
+/* Contact section */
+#contact {
+  background-color: #F7F7F7;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
 
+#contact p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
 
+#contact ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+#contact li {
+  margin: 0 10px;
+}
+
+#contact a {
+  color: #A70A0C;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#contact a:hover {
+  color: #333;
+}
+#map{
+	text-align: center;
+	justify-content: center;
+	padding-top: 20px;
+}
+.map-btn {
+  display: inline-block;
+  background-color: white;
+  color: #A70A0C;
+  padding: 20px 60px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+		margin-bottom: 20px;
+}
+
+.map-btn:hover {
+  background-color: #A70A0C;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Footer */
+#footer {
+	text-align: center;
+	justify-content: center;
+  background-color: #292929;
+  color: #fff;
+  padding: 20px
+}

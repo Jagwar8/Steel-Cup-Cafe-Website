@@ -6,16 +6,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="steelcup.css" rel="stylesheet" type="text/css">
 </head>
-	 	<script>
-		function smoothScroll(target) {
-			const element = document.getElementById(target);
-			setTimeout(() => {
-				element.scrollIntoView({
-					behavior: "smooth"
-				});
-			}, 1500);
-		}
-	</script>
+<script>
+function smoothScroll(target) {
+  const element = document.getElementById(target);
+  const yOffset = -100; // adjust this value to offset the scrolling position
+  const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+  window.scrollTo({
+    top: y,
+    behavior: 'smooth'
+  });
+
+  // prevent the default behavior of the anchor tag
+  event.preventDefault();
+}
+
+</script>
+
 
 <header>
 	<nav id="navbar">
@@ -50,14 +57,16 @@
     statusSection.classList.add("show");
   }, 1000);
 </script>
-		<div>
+  <div>
     <img src="Assets/STEEL-CUP-CAFE.jpg" alt="SCC Logo" width="1170">
   </div>
-  
-	<section id="hours">
-  <h2>Hours</h2>
+
+  <section id="hours">
+  <h1>Hours</h1>
   <p><strong>Daily hours:</strong> 7am-6pm</p>
   <p><strong>Kitchen hours:</strong> 7am-5pm</p>
+<button class="map-btn" onClick="openMap()">Directions</button>
+		  
 </section>
 	<section id="about">
 	  <h1>About Steel Cup Café</h1>
@@ -65,7 +74,7 @@
   </section>
 
 	<section id="menu" style="text-align:left;">
-	<h2 style="text-align:left;">Our Menu</h2>
+	<h1 style="text-align:left;">Our Menu</h1>
 	<div class="menu-item" style="text-align:left;">
 		<h3 style="text-align:left; height: 10vh; width:30vh;">Artisanal Drinks</h3>
 		<p style="text-align:left;">Our Fair-Trade and Rainforest Alliance-certified Organic coffee is carefully selected and roasted to perfection. Try our signature espresso drinks hot or iced, or choose from our wide selection of specialty drinks.</p>
@@ -80,7 +89,7 @@
 	</div>
 </section>
 	<section id="gallery">
-		<h2>Gallery</h2>
+		<h1>Gallery</h1>
 			<div class="image-divider divider-1">
   <div class="image-container">
     <img src="Assets/maple-latte-for-web-2.png" alt="Latte">
@@ -105,14 +114,23 @@
 	</section>
 
 	<section id="contact">
-	<h2>Contact Us</h2>
+	<h1>Contact Us</h1>
 	<p>For general inquiries, please email us at <a href="mailto:info@steelcupcafe.com">info@steelcupcafe.com</a> or by phone at <a href="tel:+15623426116">(562) 342-6116</a></p>
 	<p>Follow us on social media for updates and special offers:</p>
+	  <script>
+		  function openMap(){
+			   document.getElementById("mapDiv").style.display = "";
+			  smoothScroll('mapDiv')
+		  }
+			
+		</script>
 	<ul>
 		<li><a href="https://www.facebook.com/steelcupcafe">Facebook</a></li>
 		<li><a href="https://www.instagram.com/steelcupcafe/">Instagram</a></li>
 	</ul>
+				
 </section>
+  <section id="map"><div id="mapDiv" style="display:none"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3315.6226962289506!2d-118.14561572281939!3d33.79624027325453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dd3177626d493d%3A0x401d90818dd0ab0b!2sSteel%20Cup%20Caf%C3%A9!5e0!3m2!1sen!2sus!4v1682326877410!5m2!1sen!2sus" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></section>
 </main>
 <section id="footer">
 <footer>
